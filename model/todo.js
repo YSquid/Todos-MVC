@@ -7,11 +7,11 @@ const create = (description) => {
 };
 
 const get = () => {
-    pool.query('SELECT * FROM todos')
+   return pool.query('SELECT * FROM todos')
 };
 
 const remove = (id) => {
-    pool.query("DELETE FROM todos WHERE id = $1", [id])
+    pool.query("DELETE FROM todos WHERE todo_id = $1", [id])
 };
 
 module.exports = {
